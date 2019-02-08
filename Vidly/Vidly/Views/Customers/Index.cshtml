@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+@*this is the model data*@
+@{
+    ViewBag.Title = "Customer list";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Customers</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="">
+                    <tr class="info">
+                        <th>Id</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td><a href=customers/detail/@c.Id>@c.Id</a>	</td>
+                            <td>@c.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
