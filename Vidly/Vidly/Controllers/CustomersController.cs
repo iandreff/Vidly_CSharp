@@ -18,9 +18,14 @@ namespace Vidly.Controllers
         }
 
         // GET:
-        public ViewResult Detail(int id)
+        public ActionResult Detail(int id)
         {
             var customer = GetCustomers().Where(c => c.Id == id);
+
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
 
             //var customer = customers[id];
 

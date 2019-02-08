@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Vidly.Models.Movie>
+@{
+    ViewBag.Title = "List of Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    @if (Model.Count() == 0)
+    {
+        <h2>We don't have any movie yet.</h2>
+    }
+    else
+    {
+        <h2>Movies</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead class="">
+                        <tr class="info">
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var m in Model)
+                        {
+                            <tr>
+                                <td>@m.Name</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>
+
