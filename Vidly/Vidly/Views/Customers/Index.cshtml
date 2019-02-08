@@ -22,8 +22,8 @@
                     @foreach (var c in Model)
                     {
                         <tr>
-                            <td><a href=customers/detail/@c.Id>@c.Id</a>	</td>
-                            <td>@c.Name</td>
+                            <td>@c.Id</td>
+                            <td>@Html.ActionLink(c.Name, "Detail", "Customers", new { id = c.Id }, null)</td>
                         </tr>
                     }
                 </tbody>
