@@ -237,3 +237,7 @@ C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidl
 C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.pdb
 C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
+C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.dll
+C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.SqlServer.dll
+C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.xml
+C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.SqlServer.xml
