@@ -241,3 +241,10 @@ C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFram
 C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.SqlServer.dll
 C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.xml
 C:\Users\GMX_HP_DEV\Desktop\Vidly_CSharp\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.SqlServer.xml
+F:\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.dll
+F:\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.SqlServer.dll
+F:\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.xml
+F:\Vidly_CSharp\Vidly\Vidly\bin\EntityFramework.SqlServer.xml
+F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
+F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
+F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
