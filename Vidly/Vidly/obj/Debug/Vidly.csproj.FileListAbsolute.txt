@@ -252,3 +252,6 @@ F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.dll
 F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.pdb
 F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
+F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNameToMembershipType.resources
+F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateNameMerbershipType.resources
+F:\Vidly_CSharp\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateNameMerbershipType2.resources
