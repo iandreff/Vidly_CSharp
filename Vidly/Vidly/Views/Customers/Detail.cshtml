@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Vidly.Models.Customer>
+﻿@model Vidly.Models.Customer
 @{
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -16,12 +16,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var c in Model)
-                    {
                         <tr>
-                            <td>@c.Name</td>
+                            <td>@Model.Name</td>
                         </tr>
-                    }
                 </tbody>
             </table>
         </div>

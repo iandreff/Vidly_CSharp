@@ -28,8 +28,8 @@
                     @foreach (var c in Model)
                     {
                         <tr>
-                            <td>@c.Id</td>
                             <td>@Html.ActionLink(c.Name, "Detail", "Customers", new { id = c.Id }, null)</td>
+                            <td>@c.MembershipType.DiscountRate%</td>      
                         </tr>
                     }
                 </tbody>
