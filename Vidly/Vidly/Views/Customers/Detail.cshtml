@@ -5,22 +5,12 @@
 }
 
 <div class="container">
-    <h2>Customer Detail</h2>
-
-    <div class="row">
-        <div class="col-md-6">
-            <table class="table table-bordered table-hover table-striped">
-                <thead class="">
-                    <tr class="info">
-                        <th>Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                        <tr>
-                            <td>@Model.Name</td>
-                        </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <h2>@Model.Name</h2>
+    <ul>
+        <li>MemberShip Type: @Model.MembershipType.Name</li>
+        @if (Model.Birthdate.HasValue)
+        {
+            <li>Birthdate: @Model.Birthdate.Value.ToShortDateString()</li>
+        }
+    </ul>S
 </div>

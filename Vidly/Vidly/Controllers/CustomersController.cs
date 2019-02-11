@@ -6,6 +6,7 @@ using System.Data.Entity.Migrations;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -35,7 +36,7 @@ namespace Vidly.Controllers
         // GET:
         public ActionResult Detail(int id)
         {
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
 
             if (customer == null)
             {
@@ -44,6 +45,25 @@ namespace Vidly.Controllers
 
             return View(customer); //this is the Model
         }
-        
+
+        public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomersViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+
+            return View(viewModel); 
+        }
+
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Customers");
+        }
+
     }
 }
