@@ -6,6 +6,9 @@
 
 <div class="container">
 
+    <a href="/Movies/New" target="_blank" type="submit" class="btn btn-success">New Movie</a>
+    
+
     @if (Model.Count() == 0)
     {
         <h2>We don't have any movie yet.</h2>
@@ -27,7 +30,7 @@
                         @foreach (var m in Model)
                         {
                             <tr>
-                                <td>@Html.ActionLink(m.Name, "Detail", "Movies", new { id = m.Id }, null)</td>
+                                <td>@Html.ActionLink(m.Name, "Edit", "Movies", new { id = m.Id }, null)</td>
                                 <td>@m.Genre.Name</td>
                             </tr>
                         }
