@@ -147,9 +147,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
+    <Compile Include="Controllers\Api\MoviesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Dtos\CustomerDtos.cs" />
+    <Compile Include="Dtos\MovieDto.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="ViewModels\NewMovieFormViewModel.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
