@@ -5,39 +5,66 @@
 }
 
 <div class="container">
-
-    <a href="/Movies/New" target="_blank" type="submit" class="btn btn-success">New Movie</a>
-    
-
-    @if (Model.Count() == 0)
-    {
-        <h2>We don't have any movie yet.</h2>
-    }
-    else
-    {
-        <h2>Movies</h2>
-
-        <div class="row">
-            <div class="col-md-6">
-                <table class="table table-bordered table-hover table-striped">
-                    <thead class="">
-                        <tr class="info">
-                            <th>Name</th>
-                            <th>Genre</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var m in Model)
-                        {
-                            <tr>
-                                <td>@Html.ActionLink(m.Name, "Edit", "Movies", new { id = m.Id }, null)</td>
-                                <td>@m.Genre.Name</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+            <table id="movies" class="table table-bordered table-hover table-striped">
+                <thead class="">
+                    <tr class="info">
+                        <th>Name</th>
+                        <th>Genre</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
-    }
+    </div>
 </div>
 
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+           var table = $("#movies").DataTable({
+                ajax: {
+                    url: "/api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function (data, type, movie) {
+                            return "<a href='/movies/edit" + movie.id + "'>" + movie.name + "</a>";
+                        }
+                    },
+                    {
+                        data: "genre.name"
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-movie-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+
+            $("#movies").on("click", ".js-delete", function () {
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to delete this", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/movies/" + button.attr("data-movie-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                })
+            });
+        });
+    
+    </script>    
+}
